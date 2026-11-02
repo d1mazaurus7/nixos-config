@@ -28,11 +28,10 @@
       niriconf = "nvim ~/.config/niri/.";
       quickconf = "nvim ~/.config/quickshell/.";
 
-      # NixOS (репо живёт в ~/nixos-files)
-      nixos = "nvim ~/nixos-files/nixos/.";
-      rebuild = "sudo nixos-rebuild switch --flake ~/nixos-files/nixos#devastator";
-      update = "git -C ~/nixos-files pull && ~/nixos-files/scripts/install_programms.sh && sudo nixos-rebuild switch --flake ~/nixos-files/nixos#devastator";
-      flakeup = "sudo nix flake update --flake ~/nixos-files/nixos";
+      # NixOS (конфиг живёт в /etc/nixos, ставится через install.sh из репо)
+      nixos = "nvim /etc/nixos/.";
+      rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#devastator";
+      update = "d=$(mktemp -d) && git clone --depth 1 https://github.com/d1mazaurus7/nixos-config \"$d\" && sudo bash \"$d/install.sh\"";
       optimize = "sudo nix-collect-garbage -d && sudo nix-store --optimize";
 
       # Downloads 

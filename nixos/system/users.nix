@@ -10,6 +10,6 @@
     initialPassword = "devastator"; # сменить через passwd после первого входа
     shell = pkgs.zsh;
     description = "devastator";
-    extraGroups = [ "networkmanager" "wheel" "adbusers" ];
+    extraGroups = [ "networkmanager" "wheel" ];
   };
 }

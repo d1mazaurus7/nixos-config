@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=PdfCraft
-Comment=Просмотр pdf файлов
-Exec=/run/current-system/sw/bin/appimage-run "/home/valtrynx/Applications/pdfcraft-0.13.0-linux-x86_64.AppImage"
-Icon=applications-office
-Terminal=false
-Categories=Office;

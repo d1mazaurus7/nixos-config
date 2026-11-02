@@ -17,14 +17,6 @@
     };
   };
 
-  nixConfig = {
-    connect-timeout = 5;
-    fallback = true;
-    substituters = [ "https://cache.nixos.org" ];
-    trusted-public-keys = [
-    "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-    ];
-  };
   outputs = { self, nixpkgs, quickshell, home-manager, nur, matugen, ... }@inputs: {
     nixosConfigurations.devastator = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";

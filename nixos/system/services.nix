@@ -22,8 +22,8 @@ services.power-profiles-daemon.enable = true;
 # shell
 programs.zsh.enable = true;
 
-# udev-правила для adb и группа adbusers (есть в extraGroups у devastator)
-programs.adb.enable = true;
+# adb: udev-правила теперь даёт сам systemd (programs.adb удалён из nixpkgs),
+# нужен только сам пакет — он в system/packages.nix
 
 # sound
 security.rtkit.enable = true;

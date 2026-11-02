@@ -26,7 +26,7 @@
 #-- HOME-MANAGER --#
 #------------------#
 
-   inputs.matugen.packages.${system}.default
+   inputs.matugen.packages.${pkgs.stdenv.hostPlatform.system}.default
     
 #--------------------# 
 #-- TERMINAL UTILS --#
@@ -47,6 +47,7 @@
    iw
    rmpc
    appimage-run
+   android-tools  # adb, fastboot
 
 #----------#
 #-- LARP --#
@@ -97,7 +98,7 @@
     btop  # system info
 
  ] ++ [
-      (inputs.quickshell.packages.${pkgs.system}.default.passthru.withModules [
+      (inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.default.passthru.withModules [
       ])
  ];
 }
