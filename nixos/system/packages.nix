@@ -73,7 +73,7 @@
     steam
     nautilus
     vencord
-    firefox
+    chromium
 
 #---------------------------#
 #-- PROGRAMMING LANGUAGES --#
