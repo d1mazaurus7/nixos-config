@@ -30,11 +30,6 @@
     layout = "us";
     variant = "";
   };
-    environment.systemPackages = [
-    (pkgs.llama-cpp.override {
-      vulkanSupport = true;
-    })
-  ];
   xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [
@@ -74,8 +69,8 @@
       })
     ];
   nixpkgs.config = {
-    allowUnfree = true;
-    problems.handlers.posthog.broken = "warn";
+        allowUnfree = true;
+        problems.handlers.posthog.broken = "warn";
     };
   system.stateVersion = "26.05";
 }

@@ -7,7 +7,7 @@
   ];
   users.users."devastator" = {
     isNormalUser = true;
-    initialPassword = "devastator"; # сменить через passwd после первого входа
+    initialPassword = "devastator";
     shell = pkgs.zsh;
     description = "devastator";
     extraGroups = [ "networkmanager" "wheel" ];

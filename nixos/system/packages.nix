@@ -8,7 +8,6 @@
 #---------------------------#
     
    niri  # WM
-   rofi  # launcher
    foot  # terminal
    xwayland-satellite  #  xwayland-satellite
    xdg-utils  # xdg-utils  
@@ -18,7 +17,6 @@
    easyeffects  # equalizer
    playerctl  # player-daemon library
    pulseaudio
-   flatpak
    ddcutil
    grim
 
@@ -31,23 +29,19 @@
 #--------------------# 
 #-- TERMINAL UTILS --#
 #--------------------#
-   ripgrep  # better grep
+
    curl  # CLI HTTP-client 
    wget  # file downloader
    zip  # zip files 
    git  # git 
    unzip  # unzip files 
    gcc  # C compiler
-   gnumake  # makepkg
-   tree-sitter  # syntax parser 
    wl-clipboard  # clipboard 
    libnotify  # notifications library
-   tree  # directory-tree
    power-profiles-daemon  # power modes
    iw
    rmpc
    appimage-run
-   android-tools  # adb, fastboot
 
 #----------#
 #-- LARP --#
@@ -65,7 +59,6 @@
 #------------------#
 #-- GUI PROGRAMS --#
 #------------------#
-    obsidian  # notes
     pavucontrol  # gui for sound
     telegram-desktop  # messenger
     blueman  # gui for bluetooth
@@ -73,7 +66,7 @@
     steam
     nautilus
     vencord
-    chromium
+    firefox
 
 #---------------------------#
 #-- PROGRAMMING LANGUAGES --#

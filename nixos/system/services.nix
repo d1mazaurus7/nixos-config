@@ -22,17 +22,14 @@ services.power-profiles-daemon.enable = true;
 # shell
 programs.zsh.enable = true;
 
-# adb: udev-правила теперь даёт сам systemd (programs.adb удалён из nixpkgs),
-# нужен только сам пакет — он в system/packages.nix
-
 # sound
 security.rtkit.enable = true;
 services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    jack.enable = true;
-    wireplumber.enable = true;
+        enable = true;
+        alsa.enable = true;
+        alsa.support32Bit = true;
+        pulse.enable = true;
+        jack.enable = true;
+        wireplumber.enable = true;
     };
 }

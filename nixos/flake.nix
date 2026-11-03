@@ -7,6 +7,7 @@
         url = "github:quickshell-mirror/quickshell";
         inputs.nixpkgs.follows = "nixpkgs";
     };
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     matugen = {
       url = "github:InioX/Matugen";
     };
@@ -17,7 +18,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, quickshell, home-manager, nur, matugen, ... }@inputs: {
+  outputs = { self, nixpkgs, quickshell, home-manager, nur, matugen, spicetify-nix, ... }@inputs: {
     nixosConfigurations.devastator = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
@@ -44,6 +45,8 @@
           home-manager.users.devastator = {
             imports = [
                 ./home/default.nix
+                inputs.spicetify-nix.homeManagerModules.default
+
             ];
           };
         }

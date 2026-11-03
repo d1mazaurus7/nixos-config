@@ -8,6 +8,8 @@
     ./services.nix
     ./set-wallpaper.nix
     ./cursor.nix
+    ./firefox.nix
+    ./spicetify.nix
 
     # easyeffects
     ./easyeffects/atmosphere.nix
